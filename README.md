@@ -1,2 +1,2 @@
-# deviceproject
+# sedona
 Проект обучения
