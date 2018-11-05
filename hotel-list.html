@@ -48,14 +48,12 @@
 	   			<label for="ch6">Аппартаменты</label>
 			</div>
 
-			<div class="filters-column filtres-price">
-	   			<p>Стоимость в сутки (р):</p>
-	   			<table>
-	   				<tr>
-	   					<th>От 0</th>
-	   					<th>До 3000</th>
-	   				</tr>
-	   			</table>
+			<div class="filters-column filtres-price">	   			
+	   			<p>Стоимость в сутки (р):</p>	   		
+	   			<div class="filters-price">
+	   				<div class="price-frame-input">от <input class="min-price" type="text" value="0"></div>					
+					<div class="price-frame-input">до <input class="max-price" type="text" value="3000"></div>
+	   			</div>
 
 	   			<div class="range-controls">
 	   			<div class="scale">
@@ -66,6 +64,7 @@
 				</div>
 				<button class="btn-transparent" type="submit">Показать</button>
 			</div>
+			
 		</section>
 
 		<section class="search-resultats">
