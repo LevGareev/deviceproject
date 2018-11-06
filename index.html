@@ -102,8 +102,40 @@
 			<div class="map-image">				
 			</div>	
 			<div class="form">
-				<form class='form-hotel-reserve'>				
-				</form>		
+				<form class="form-booking" action="/echo" method="GET">
+
+						<div class="input-line">
+							<label for="ch1">Дата заезда: <i class="icon-calendar"></i></label>
+							<input class="booking-calendar" name="checkin" type="text" placeholder="24 апреля 2014" id="ch1"/>
+						</div>
+
+						<div class="input-line">
+							<label for="ch2">Дата выезда: <i class="icon-calendar"></i></label>
+							<input class="booking-calendar" name="checkout" type="text" placeholder="4 июля 2014" id="ch2"/>
+						</div>
+
+						
+						<div class="input-line">
+							<div class="input-line-item">	
+								<label for="ch3">Взрослые:</label>
+								<div class="booking-calendar-minus-plus">
+									<button class="btn-grey icon-minus" type="button"></button>
+									<input class="booking-calendar-select" name="adults" type="text" value="2" id="ch3"/>
+									<button class="btn-grey icon-plus" type="button"></button>
+								</div>
+							</div>
+					
+							<div class="input-line-item">	
+								<label for="ch4">Дети:</label>
+								<div class="booking-calendar-minus-plus">
+									<button class="btn-grey icon-minus" type="button"></button>
+									<input class="booking-calendar-select" name="children" type="text" value="0" id="ch4"/>
+									<button class="btn-grey icon-plus" type="button"></button>
+							</div>
+					</div> 
+
+						<button class="form-btn-blue btn-blue" type="submit">Найти</button>
+					</form>
 			</div>	
 
 			<footer class="main-footer">
