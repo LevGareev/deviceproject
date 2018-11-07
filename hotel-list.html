@@ -3,7 +3,9 @@
 <head>
   <meta charset="utf-8" />
   <title>Поиск отелей в Седоне</title>
-  <link rel="stylesheet" href="/CSS/style.css" />
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+<link rel="stylesheet" type="text/css" href="css/style.css" />
 </head>
 <body>
 	<div class="wrapper">
@@ -28,40 +30,42 @@
 
 		<section class="filtres">
 			
-			<div class="filtres-column">
-				<p>Инфаструктура</p>
-				<input type="checkbox" name="infastructure1" value="i1" id="ch1" checked>
-				<label for="ch1">Бассейн</label>
-				<input type="checkbox" name="infastructure2" value="i2" id="ch2">
-				<label for="ch2">Парковка</label>
-	   			<input type="checkbox" name="infastructure3" value="i3" id="ch3">
-	   			<label for="ch3">Wi-fi</label>	
-			</div>
-
-			<div class="filtres-column">
-				<p>Тип жилья</p>
-				<input type="checkbox" name="hotel1" value="h1" id="ch4" checked>
-				<label for="ch4">Гостиница</label>
-				<input type="checkbox" name="hotel2" value="h2" id="ch5" checked>
-				<label for="ch5">Мотель</label>
-	   			<input type="checkbox" name="hotel3" value="h3" id="ch6" checked>
-	   			<label for="ch6">Аппартаменты</label>
-			</div>
-
-			<div class="filters-column filtres-price">	   			
-	   			<p>Стоимость в сутки (р):</p>	   		
-	   			<div class="filters-price">
-	   				<div class="price-frame-input">от <input class="min-price" type="text" value="0"></div>					
-					<div class="price-frame-input">до <input class="max-price" type="text" value="3000"></div>
-	   			</div>
-
-	   			<div class="range-controls">
-	   			<div class="scale">
-					<div class="bar"></div>
+			<form class="form-filtres" action="/echo" method="GET">
+				<div class="filtres-column">
+					<p>Инфаструктура</p>
+					<input type="checkbox" name="infastructure1" value="i1" id="ch1" checked>
+					<label for="ch1">Бассейн</label>
+					<input type="checkbox" name="infastructure2" value="i2" id="ch2">
+					<label for="ch2">Парковка</label>
+		   			<input type="checkbox" name="infastructure3" value="i3" id="ch3">
+		   			<label for="ch3">Wi-fi</label>	
 				</div>
-				<div class="range-toggle range-toggle-min"></div>
-				<div class="range-toggle range-toggle-max"></div>
+
+				<div class="filtres-column">
+					<p>Тип жилья</p>
+					<input type="checkbox" name="hotel1" value="h1" id="ch4" checked>
+					<label for="ch4">Гостиница</label>
+					<input type="checkbox" name="hotel2" value="h2" id="ch5" checked>
+					<label for="ch5">Мотель</label>
+		   			<input type="checkbox" name="hotel3" value="h3" id="ch6" checked>
+		   			<label for="ch6">Аппартаменты</label>
 				</div>
+
+				<div class="filters-column filtres-price">	   			
+		   			<p>Стоимость в сутки (р):</p>	   		
+		   			<div class="filters-price">
+		   				<div class="price-frame-input">от <input class="min-price" type="text" value="0"></div>					
+						<div class="price-frame-input">до <input class="max-price" type="text" value="3000"></div>
+		   			</div>
+
+		   			<div class="range-controls">
+		   			<div class="scale">
+						<div class="bar"></div>
+					</div>
+					<div class="range-toggle range-toggle-min"></div>
+					<div class="range-toggle range-toggle-max"></div>
+					</div>
+				</form>
 				<button class="btn-transparent" type="submit">Показать</button>
 			</div>
 
@@ -70,7 +74,7 @@
 		<section class="search-resultats">
 			
 			<div class="resultats-left">
-				<p>Найдено: 3</p>
+				<h2>Найдено: 3</h2>
 			</div>
 			
 			<div class="resultats-center">
@@ -95,7 +99,7 @@
 				<figure class="hotel-image"><img src="img/hotel1.jpg" alt="hotel-picture" width="135" height="90"></figure>
 				
 				<div class="hotel-content">
-					<p class="hotel-name">Amara Resort & Spa</p>
+					<h2">Amara Resort & Spa</h2>
 					<div class="hotel-btn"> 
 						<div class="type">Гостиница</div> 
 						<a href="#" class="btn-blue">Подробнее</a> 
@@ -118,7 +122,7 @@
 				<figure class="hotel-image"><img src="img/hotel2.jpg" alt="hotel-picture" width="135" height="90"></figure>
 				
 				<div class="hotel-content">
-					<p class="hotel-name">Desert Quail Inn</p>
+					<h2>Desert Quail Inn</h2>
 					<div class="hotel-btn"> 
 						<div class="type">Мотель</div> 
 						<a href="#" class="btn-blue">Подробнее</a> 
@@ -141,7 +145,7 @@
 				<figure class="hotel-image"><img src="img/hotel3.jpg" alt="hotel-picture" width="135" height="90"></figure>
 				
 				<div class="hotel-content">
-					<p class="hotel-name">Villas at Poco Diablo</p>
+					<h2>Villas at Poco Diablo</h2>
 					<div class="hotel-btn"> 
 						<div class="type">Аппартаменты</div> 
 						<a href="#" class="btn-blue">Подробнее</a> 
