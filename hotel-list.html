@@ -22,7 +22,7 @@
 					<li><a href='#'>Информация</a></li>
 					<li><a href="#">Фото и Видео</a></li>
 					<li><a href="#">Карта Штата</a></li>
-					<li><a href="#">Гостиницы</a></li>
+					<li><a href="#" class="select">Гостиницы</a></li>
 	            </ul>		
 			</nav>
 
@@ -32,27 +32,27 @@
 			
 			<form class="form-filtres" action="/echo" method="GET">
 				<div class="filtres-column">
-					<p>Инфаструктура</p>
-					<input type="checkbox" name="infastructure1" value="i1" id="ch1" checked>
+					<h2>Инфаструктура</h2>
+					<input type="checkbox" name="infastructure1" value="i1" id="ch1" class='filter-input' checked>
 					<label for="ch1">Бассейн</label>
-					<input type="checkbox" name="infastructure2" value="i2" id="ch2">
+					<input type="checkbox" name="infastructure2" value="i2" id="ch2"class='filter-input'>
 					<label for="ch2">Парковка</label>
-		   			<input type="checkbox" name="infastructure3" value="i3" id="ch3">
+		   			<input type="checkbox" name="infastructure3" value="i3" id="ch3"class='filter-input'>
 		   			<label for="ch3">Wi-fi</label>	
 				</div>
 
 				<div class="filtres-column">
-					<p>Тип жилья</p>
-					<input type="checkbox" name="hotel1" value="h1" id="ch4" checked>
+					<h2>Тип жилья</h2>
+					<input type="checkbox" name="hotel1" value="h1" id="ch4" class='filter-input' checked>
 					<label for="ch4">Гостиница</label>
-					<input type="checkbox" name="hotel2" value="h2" id="ch5" checked>
+					<input type="checkbox" name="hotel2" value="h2" id="ch5" class='filter-input' checked>
 					<label for="ch5">Мотель</label>
-		   			<input type="checkbox" name="hotel3" value="h3" id="ch6" checked>
+		   			<input type="checkbox" name="hotel3" value="h3" id="ch6" class='filter-input' checked>
 		   			<label for="ch6">Аппартаменты</label>
 				</div>
 
 				<div class="filters-column filtres-price">	   			
-		   			<p>Стоимость в сутки (р):</p>	   		
+		   			<h2>Стоимость в сутки (р):</h2>	   		
 		   			<div class="filters-price">
 		   				<div class="price-frame-input">от <input class="min-price" type="text" value="0"></div>					
 						<div class="price-frame-input">до <input class="max-price" type="text" value="3000"></div>
@@ -65,10 +65,9 @@
 					<div class="range-toggle range-toggle-min"></div>
 					<div class="range-toggle range-toggle-max"></div>
 					</div>
-				</form>
-				<button class="btn-transparent" type="submit">Показать</button>
-			</div>
-
+			</form>
+			<a class="btn-transparent">Показать</a>
+			
 		</section>
 
 		<section class="search-resultats">
@@ -80,7 +79,7 @@
 			<div class="resultats-center">
 			<ul>
 				<li>Сортировка:</li>
-				<li><a href="#">По цене</a></li>
+				<li><a href="#" class="active">По цене</a></li>
 				<li><a href="#">По типу</a></li>
 				<li><a href="#">По рейтингу</a></li>
 			</ul>
@@ -99,7 +98,7 @@
 				<figure class="hotel-image"><img src="img/hotel1.jpg" alt="hotel-picture" width="135" height="90"></figure>
 				
 				<div class="hotel-content">
-					<h2">Amara Resort & Spa</h2>
+					<h2><a href='#'>Amara Resort & Spa</a></h2>
 					<div class="hotel-btn"> 
 						<div class="type">Гостиница</div> 
 						<a href="#" class="btn-blue">Подробнее</a> 
@@ -122,7 +121,7 @@
 				<figure class="hotel-image"><img src="img/hotel2.jpg" alt="hotel-picture" width="135" height="90"></figure>
 				
 				<div class="hotel-content">
-					<h2>Desert Quail Inn</h2>
+					<h2><a href='#' >Desert Quail Inn</a></h2>
 					<div class="hotel-btn"> 
 						<div class="type">Мотель</div> 
 						<a href="#" class="btn-blue">Подробнее</a> 
@@ -145,7 +144,7 @@
 				<figure class="hotel-image"><img src="img/hotel3.jpg" alt="hotel-picture" width="135" height="90"></figure>
 				
 				<div class="hotel-content">
-					<h2>Villas at Poco Diablo</h2>
+					<h2><a href='#' >Villas at Poco Diablo</a></h2>
 					<div class="hotel-btn"> 
 						<div class="type">Аппартаменты</div> 
 						<a href="#" class="btn-blue">Подробнее</a> 
@@ -165,16 +164,18 @@
 
 		</section>
 
-		<footer class="main-footer">
-			
-			<a href="#" class="hashtag">#visitsedona</a>
+		<footer class="main-footer footer-hl">
+				<div class="hashtag"><a href="#">#visitsedona</a>
+				</div>
 				<div class="social">
 					<a href="#" class="social-btn icon-twitter"></a>
 					<a href="#" class="social-btn icon-facebook"></a>
 					<a href="#" class="social-btn icon-youtube"></a>
 				</div>
 				<div class="copyright">website by<a href="#"></a></div>
-		</footer>
+			</footer>
+		</section>
+
 
 	</div>
 </body>
