@@ -20,7 +20,7 @@
 				</figure>
 				<ul class="site-navigation">			
 					<li><a href='#'>Информация</a></li>
-					<li><a href="#">Фото и Видео</a></li>
+					<li class="offset"><a href="#">Фото и Видео</a></li>
 					<li><a href="#">Карта Штата</a></li>
 					<li><a href="#" class="select">Гостиницы</a></li>
 	            </ul>		
@@ -28,32 +28,37 @@
 
 		</header>
 
-		<section class="filtres">
+		<section class="filters">
 			
-			<form class="form-filtres" action="/echo" method="GET">
-				<div class="filtres-column">
-					<h2>Инфаструктура</h2>
-					<input type="checkbox" name="infastructure1" value="i1" id="ch1" class='filter-input' checked>
-					<label for="ch1">Бассейн</label>
-					<input type="checkbox" name="infastructure2" value="i2" id="ch2"class='filter-input'>
-					<label for="ch2">Парковка</label>
-		   			<input type="checkbox" name="infastructure3" value="i3" id="ch3"class='filter-input'>
-		   			<label for="ch3">Wi-fi</label>	
+			<form class="form-filters" action="/echo" method="GET">
+				
+				<div class="filters-column">
+					<h2>Инфаструктура:</h2>
+					<ul>
+						<li><input type="checkbox" name="infastructure1" value="i1" id="ch1" class='filter-input' checked>
+						<label for="ch1">Бассейн</label></li>
+						<li><input type="checkbox" name="infastructure2" value="i2" id="ch2"class='filter-input'>
+						<label for="ch2">Парковка</label></li>
+			   			<li><input type="checkbox" name="infastructure3" value="i3" id="ch3"class='filter-input'>
+			   			<label for="ch3">Wi-fi</label></li>	
+		   			</ul>
 				</div>
 
-				<div class="filtres-column">
-					<h2>Тип жилья</h2>
-					<input type="checkbox" name="hotel1" value="h1" id="ch4" class='filter-input' checked>
-					<label for="ch4">Гостиница</label>
-					<input type="checkbox" name="hotel2" value="h2" id="ch5" class='filter-input' checked>
-					<label for="ch5">Мотель</label>
-		   			<input type="checkbox" name="hotel3" value="h3" id="ch6" class='filter-input' checked>
-		   			<label for="ch6">Аппартаменты</label>
+				<div class="filters-column">
+					<h2>Тип жилья:</h2>
+					<ul>
+						<li><input type="checkbox" name="hotel1" value="h1" id="ch4" class='filter-input' checked>
+						<label for="ch4">Гостиница</label></li>
+						<li><input type="checkbox" name="hotel2" value="h2" id="ch5" class='filter-input' checked>
+						<label for="ch5">Мотель</label></li>
+			   			<li><input type="checkbox" name="hotel3" value="h3" id="ch6" class='filter-input' checked>
+			   			<label for="ch6">Аппартаменты</label></li>
+			   		</ul>
 				</div>
 
-				<div class="filters-column filtres-price">	   			
+				<div class="filters-column filters-price">	   			
 		   			<h2>Стоимость в сутки (р):</h2>	   		
-		   			<div class="filters-price">
+		   			<div class="price-frame">
 		   				<div class="price-frame-input">от <input class="min-price" type="text" value="0"></div>					
 						<div class="price-frame-input">до <input class="max-price" type="text" value="3000"></div>
 		   			</div>

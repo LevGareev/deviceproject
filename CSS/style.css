@@ -66,6 +66,7 @@ a {
 .site-navigation li {
   display: inline-block;
   width: 20%;
+  
 }
 
 .offset {
@@ -219,12 +220,17 @@ a {
   margin-bottom: 25px;
 }
 
+.reasons-row h2 {
+  margin-bottom: 25px;
+}
+
 .reasons-row-image h2,
 .reasons-row-background h2 {
   margin: 0 auto;
   margin-top: 45px;
   width: 151px;
 }
+
 
 .reason-icon {
   position: relative;
@@ -309,18 +315,23 @@ a {
 }
 
 .map {
+  position: relative;
   height: 593px;
   background-image: url(../img/map.jpg);
   background-position: top center;
   background-repeat: no-repeat;
+  background-size: cover;
 }
 
-form {
-  box-sizing: border-box;
+.form {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  display: none;
   margin: 0 auto;
-  width: 568px;
+  width: 458px;
   padding: 55px;
-  text-align: center;
+  text-align: left;
   font: inherit;
   line-height: auto;
   font-weight: 700;
@@ -329,14 +340,28 @@ form {
 }
 
 .input-line input {
+  box-sizing: border-box;
+
+  margin: 0;
+  padding: 8px;
+
+  width: 345px;
+  
   font: inherit;
+  line-height: 26px;
+  font-weight: 700;
 
   background-color: #f2f2f2;
-  border: none;
+  border: 2px solid #f2f2f2;
+}
+
+.input-line-item input {
+  width: 115px;
 }
 
 .input-line input:hover {
   background-color: #ebebeb;
+  border: 2px solid #ebebeb;
 }
 
 .input-line input:focus {
@@ -350,14 +375,19 @@ form {
 }
 
 .form-btn-blue {
+  display: block;
+  margin-top: 54px;
+  padding: 15px 196px;
+  font-weight: 700;
   background-color: #81b3d2;
-
+  color: #ffffff;
   font-size: 21px;
   line-height: auto;
-  font-weight: 700;
-  color: #ffffff;
-
+  text-align: center;
+  text-transform: uppercase;
   border: none;
+  outline: none;
+  cursor: pointer;
 }
 
 .form-btn-blue:hover,
@@ -374,11 +404,17 @@ form {
 }
 
 footer {
+  display: flex;
   padding: 36px 0;
   font-size: 0;
   background: rgba(254, 254, 254, 0.9);
 }
  
+footer div {
+  width: 33.3333%;
+  text-align: center;
+}
+
 footer .footer-hl {
   background-color: rgb(255, 255, 255);
 }
@@ -406,21 +442,64 @@ footer .footer-hl {
 .copyright {
   text-align: center;
   line-height: 26px;  
+  font-size: 14px;
+  vertical-align: middle;
+  text-align: center;
+  color: black;
+  text-decoration: none;
 }
 
-/*
-Дополнительные стили странички отелей*/
+/*Дополнительные стили странички отелей*/
+/*Под вопросом надобность тут флексов*/
+.search-resultats h2,
+.hotel-list-item h2 {
+  margin: 0;
+  padding: 0;
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700px
+  color: #000000;
+}
 
-.form-filtres {
+.form-filters {
+  display: flex;
+  padding: 30px 6%;
   background-color: #6c8fb5;
   background-image: url(../img/filtres-background.jpg);
-  background-position: top center;
-  background-repeat: no-repeat;
+  background-size: cover;
+  font: inherit;
+  color: #ffffff;
+}
+
+.filters-column ul{
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.filters-column {  
+  box-sizing: border-box;
+  width: 130px;
+  margin-right: 105px;
+ 
+}
+
+.filters-price {
+  width: 30%;
+  margin-right: 0;
+}
+
+.filters-column:nth-child(2) {  
+  margin-right: auto;
 }
 
 
-.form-filtres,
-.form-filtres h2 {
+.form-filters:nth-child(3) {
+  text-align: right;
+}
+
+.form-filters h2 {
   font-size: 16px;
   font-weight: 700;
   color: #ffffff;
@@ -430,11 +509,10 @@ footer .footer-hl {
   border-color: #6a6a6a;
 } 
 
-.filters-price {
-  border: 2px solid white;
+.price-frame {
   border-color: white;
 }
-
+  
 .min-price,
 .max-price {
   font: inherit;
@@ -452,8 +530,6 @@ footer .footer-hl {
 
   border: 2px solid white;
   border-color: #ffffff;
-  
-
 }
 
 .btn-transparent:hover,
@@ -462,19 +538,17 @@ footer .footer-hl {
   background-color: #ffffff;
 }
 
-.search-resultats h2,
-.hotel-list-item h2 {
-  font-size: 21px;
-  line-height: 26px;
-  font-weight: 700px
-  color: #000000;
+.search-resultats {
+  padding: 30px 6%;
 }
 
-.search-resultats ul{
-  list-style: none;
+.search-resultats div {
+  display: inline-block;
+  
 }
 
 .search-resultats li {
+  display: inline-block;
   font-size: 12px;
   line-height: 18px;
 
@@ -501,6 +575,16 @@ footer .footer-hl {
   color: #81b3d2;
 
   border: none;
+}
+
+.resultats-left {
+  margin-right: 40px;
+}
+
+.resultats-center ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .hotel-content .btn-blue{
